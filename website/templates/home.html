@@ -2,39 +2,74 @@
 
 {% block content %}
 
-<div class='col-md-6 offset-md-3'>
+
 
 {% if user.is_authenticated %}
 
-<h1>Hello mate</h1>
+
+<table class="table table-striped table-hover table-bordered">
+  <thead class="table-dark">
+    <tr>
+      
+      <th scope="col">QR-code</th>
+      <th scope="col">name</th>
+      <th scope="col">br</th>
+      <th scope="col">reworked</th>
+      <th scope="col">cont</th>
+      <th scope="col">verification</th>
+      <th scope="col">created at</th>
+      <th scope="col">ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+{% if records %}
+	{% for record in records %}
+		<tr>
+			
+			<td>{{ record.qrcode_id }}</td>
+			<td>{{ record.name }}</td>
+			<td>{{ record.br }}</td>
+			<td>{{ record.reworked }}</td>
+			<td>{{ record.cont }}</td>
+			<td>{{ record.verification }}</td>
+			<td>{{ record.created_at }}</td>
+			<td><a href="{% url 'record' record.id %}">{{ record.id }}</a></td>
+		</tr>
+	{% endfor %}
+
+{% endif %}
+
+	
+	  </tbody>
+	</table>
+
+
+
+
 
 {% else %}
 
+<div class="col-md-6 offset-md-3">
 <h1>Login</h1>
 <br/>
 
 <form method="POST" action="{% url 'home' %}">
 	{% csrf_token %}
-	<form>
-  
+
   <div class="mb-3">
+    <input type="text" class="form-control" name="username", placeholder="Username" required>
     
-    <input type="text" class="form-control" name= 'username', placeholder='First Name' required>
-  
-  </div>
-          
+  </div><br/>
   <div class="mb-3">
-   
-    <input type="password" class="form-control" name='password', placeholder="Password" required>
+    <input type="password" class="form-control" name="password", placeholder="Password" required>
   </div>
-  		<br/>
-  
-  		<button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+  <br/>
+  <button type="submit" class="btn btn-secondary">Login</button>
 
 </form>
 
-</div>
+
 
 {% endif %}
 
