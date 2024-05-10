@@ -20,7 +20,7 @@
 </p>
 
 <p class="card-text">
-<strong>Br: </strong>{{ product_record.br  }}</p>
+<strong>BR: </strong>{{ product_record.br  }}</p>
 
 <p class="card-text">
 <strong>Reworked: </strong>{{ product_record.reworked }}</p>
@@ -32,7 +32,7 @@
 <strong>Verification: </strong>{{ product_record.verification }}</p>
 
 <p class="card-text">
-<strong>Create At: </strong>{{ product_record.created_at }}</p>
+<strong>Create date&time: </strong>{{ product_record.created_at }}</p>
 
 <p class="card-text">
 <strong>ID: </strong>{{ product_record.id }}</p>
@@ -46,7 +46,7 @@
 
 <a href="{% url 'delete_record' product_record.id %}" class="btn btn-danger">Delete</a>
 
-<a href="{% url 'update_record' product_record.id %}" class="btn btn-secondary">Update Record</a>
+<a href="{% url 'update_record' product_record.id %}" class="btn btn-warning">Update Record</a>
 		
 
 {% endblock %}

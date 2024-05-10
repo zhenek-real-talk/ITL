@@ -1,0 +1,88 @@
+{% extends 'base.html '%}
+
+
+{% block content %}
+
+	
+
+
+	{% if searched  %}
+		
+		<h2>You Searched For '{{ searched }}' </h2>
+		<br/>
+
+<!--	{% if qty == 0 %}
+			<h3 style='color:red'><p>No records found</p></h3>
+		{% else %}
+			<h3 style='color:green'><p>{{ qty }} record(s) found</p></h3>
+		{% endif %}
+-->
+
+		{% if qty == 1 %}
+			<h3><p>1 record found</p></h3>
+		{% else %}
+			<h3><p>{{ qty }} records found</p></h3>
+		{% endif %}
+
+
+		{% for record in records %}
+		
+			{% if records %}
+
+			<div class="card">
+  <div class="card-header">
+    Record
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ record }}</h5>
+    <p class="card-text">
+    	<ul>
+    {% if record.qrcode_id %}
+		<li>{{ record.qrcode_id }}</li>
+	{% endif %}
+
+	{% if record.br %}
+		<li>{{ record.br }}</li>
+	{% endif %}
+
+	{% if record.reworked %}
+		<li>{{ record.reworked }}</li>
+	{% endif %}
+
+	{% if record.cont %}
+		<li>{{ record.cont }}</li>
+	{% endif %}
+
+	{% if record.verification %}
+		<li>{{ record.verification }}</li>
+	{% endif %}
+
+	{% if record.id %}
+		<li><a href="{% url 'record' record.id %}">{{ record.id }}</a></li>
+	{% endif %}
+
+	
+	</ul>
+
+		{% else %}
+			<h1>No results found</h1>
+		{% endif %}
+
+    </p>
+  </div>
+</div>
+	<br/>
+
+	
+		{% endfor %}
+
+		
+	{% else %}
+		<h1>Hey! You Forgot To Search For A Record...</h1>
+	{% endif %}
+
+	
+
+	
+	
+{% endblock %}

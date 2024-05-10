@@ -7,17 +7,17 @@
 {% if user.is_authenticated %}
 
 
-<table class="table table-striped table-hover table-bordered">
+<table id ='myTable2' class="table table-striped table-hover table-bordered">
   <thead class="table-dark">
     <tr>
       
       <th scope="col">QR-code</th>
-      <th scope="col">name</th>
-      <th scope="col">br</th>
-      <th scope="col">reworked</th>
-      <th scope="col">cont</th>
-      <th scope="col">verification</th>
-      <th scope="col">created at</th>
+      <th scope="col">Name</th>
+      <th scope="col">BR</th>
+      <th scope="col">Reworked</th>
+      <th scope="col">CONT</th>
+      <th scope="col">Verification</th>
+      <th scope="col">Created date</th>
       <th scope="col">ID</th>
     </tr>
   </thead>
@@ -39,6 +39,8 @@
 	{% endfor %}
 
 {% endif %}
+
+
 
 	
 	  </tbody>
@@ -71,6 +73,9 @@
 
 
 
+
+
 {% endif %}
 
 {% endblock %}
+

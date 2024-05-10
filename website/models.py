@@ -30,4 +30,4 @@ class Record(models.Model):
 
 
 	def __str__(self):
-		return(f"{self.name} {self.qrcode_id}")
+		return self.name

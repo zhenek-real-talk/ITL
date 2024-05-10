@@ -2,6 +2,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django import forms
 from .models import Record
+from django.db.models.fields import BLANK_CHOICE_DASH
+
 
 class SignUpForm(UserCreationForm):
 	email = forms.EmailField(label="", widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Email Address'}))
@@ -33,17 +35,29 @@ class SignUpForm(UserCreationForm):
 		self.fields['password2'].help_text = '<span class="form-text text-muted"><small>Enter the same password as before, for verification.</small></span>'	
 
 
+reworked_options = [
+	('---please choose reworked option---','---please choose reworked option---'),
+	('belt issue', 'Belt issue'),
+	('motor issue', 'Motor issue'),
+	('diverter issue', 'Diverter issue'),
+	('lightpipe issue', 'Lightpipe issue'),
+	('camera issue', 'Camera issue')
+	]
 
+verif_choices = [
+	('---verification---','---verification---'),
+	('yes', 'Yes'),
+	('no', 'No')
+	]
 
 # Create Add Record Form
 class AddRecordForm(forms.ModelForm):
-	name = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={"placeholder":"Name", "class":"form-control"}), label="")
-	br = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={"placeholder":"br", "class":"form-control"}), label="")
-	reworked = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={"placeholder":"reworked", "class":"form-control"}), label="")
-	cont = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={"placeholder":"Cont", "class":"form-control"}), label="")
-	verification = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={"placeholder":"verification", "class":"form-control"}), label="")
-	qrcode_id = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={"placeholder":"QR-code", "class":"form-control"}), label="")
-	
+	name = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={"placeholder":"---Name---", "class":"form-control"}), label="")
+	br = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={"placeholder":"---BR---", "class":"form-control"}), label="")
+	reworked = forms.CharField(required=True, widget=forms.Select(attrs={'placeholder':'Reworked Option', 'class':'form-control'}, choices =  reworked_options), label='')
+	cont = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={"placeholder":"---CONT---", "class":"form-control"}), label="")
+	verification = forms.CharField(required=True, widget=forms.Select(attrs={"placeholder":"Verification", "class":"form-control"}, choices = verif_choices), label="")
+	qrcode_id = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={"placeholder":"---QR-code---", "class":"form-control"}), label="")
 	
 	class Meta:
 		model = Record

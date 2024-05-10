@@ -3,6 +3,37 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from .forms import SignUpForm, AddRecordForm
 from .models import Record
+from django.http import HttpResponseRedirect, HttpResponse
+from datetime import datetime
+from django.utils.datastructures import MultiValueDictKeyError
+from django.shortcuts import render, redirect
+import calendar
+from calendar import HTMLCalendar
+from datetime import datetime
+from django.http import HttpResponseRedirect
+from django.contrib.auth.models import User
+import csv
+
+
+
+
+def search_record(request):
+	if request.method == "POST":
+		searched = request.POST['searched']
+		records = Record.objects.filter(name__icontains=searched) or Record.objects.filter(qrcode_id__icontains=searched) or Record.objects.filter(cont__icontains=searched)
+		qty = records.count()
+
+		return render(request, 
+		'search_record.html', 
+		{'searched':searched,
+		'records':records,
+		'qty':qty})
+
+	else:
+		return render(request, 
+		'search_record.html', 
+		{})
+
 
 
 def home(request):
@@ -99,3 +130,5 @@ def update_record(request, pk):
 	else:
 		messages.success(request, "You Must Be Logged In...")
 		return redirect('home')
+
+

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="{% url 'home' %}">Django ITL</a>
+    <a class="navbar-brand" href="{% url 'home' %}">ITL-reworked</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -11,6 +11,7 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'add_record' %}">Add Record</a>
         </li>
+    
         <li class="nav-item">
           <a class="nav-link" href="{% url 'logout' %}">Logout</a>
         </li>
@@ -24,7 +25,17 @@
         </li>        
         {% endif %}
         
-        
+      </ul>
+      <form class="d-flex" method=POST action="{% url 'search_record' %}">
+        {% csrf_token %}
+
+        <input class="form-control me-2" type="search" placeholder="Search Records" aria-label="Search" name="searched">
+        <button class="btn btn-outline-secondary" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
       </ul>
       
     </div>
