@@ -62,6 +62,7 @@ def logout_user(request):
 	return redirect('home')
 
 
+
 def register_user(request):
 	if request.method == 'POST':
 		form = SignUpForm(request.POST)
@@ -104,6 +105,7 @@ def delete_record(request, pk):
 		return redirect('home')
 
 
+
 def add_record(request):
 	form = AddRecordForm(request.POST or None)
 	if request.user.is_authenticated:
@@ -116,6 +118,7 @@ def add_record(request):
 	else:
 		messages.success(request, "You Must Be Logged In...")
 		return redirect('home')
+
 
 
 def update_record(request, pk):

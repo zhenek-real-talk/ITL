@@ -1,1 +1,111 @@
 Watching for file changes with StatReloader
+C:\django\project\reworked\website\views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 10, 2024 - 08:57:51
+Django version 5.0.4, using settings 'reworked.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CTRL-BREAK.
+
+Watching for file changes with StatReloader
+[13/May/2024 14:21:40] "GET /add_record/ HTTP/1.1" 200 3856
+[13/May/2024 14:21:40] "GET /static/images/favicon.png HTTP/1.1" 304 0
+[13/May/2024 14:21:41] "GET /add_record/ HTTP/1.1" 200 3856
+[13/May/2024 14:21:42] "GET / HTTP/1.1" 200 4219
+[13/May/2024 14:21:43] "GET /add_record/ HTTP/1.1" 200 3856
+[13/May/2024 14:21:48] "GET /add_record/ HTTP/1.1" 200 3856
+[13/May/2024 14:21:49] "GET / HTTP/1.1" 200 4219
+[13/May/2024 14:21:50] "GET /add_record/ HTTP/1.1" 200 3856
+[13/May/2024 14:21:51] "GET / HTTP/1.1" 200 4219
+[13/May/2024 14:21:53] "POST /search_record/ HTTP/1.1" 200 2279
+[13/May/2024 14:21:55] "GET / HTTP/1.1" 200 4219
+[14/May/2024 13:47:23] "GET / HTTP/1.1" 200 4219
+[15/May/2024 09:52:35] "GET / HTTP/1.1" 200 4219
+[20/May/2024 08:19:25] "GET / HTTP/1.1" 200 2656
+[20/May/2024 08:19:32] "POST / HTTP/1.1" 302 0
+[20/May/2024 08:19:32] "GET / HTTP/1.1" 200 4490
+[20/May/2024 15:12:34] "GET / HTTP/1.1" 200 4219
+[20/May/2024 15:12:35] "GET /static/images/favicon.png HTTP/1.1" 304 0
+[21/May/2024 14:26:21] "GET / HTTP/1.1" 200 4219
+[21/May/2024 14:26:24] "GET /add_record/ HTTP/1.1" 200 3856
+[21/May/2024 14:26:28] "POST /search_record/ HTTP/1.1" 200 2167
+[21/May/2024 14:26:29] "POST /search_record/ HTTP/1.1" 200 3051
+[21/May/2024 14:26:31] "POST /search_record/ HTTP/1.1" 200 2279
+[21/May/2024 14:26:34] "GET / HTTP/1.1" 200 4219
+Watching for file changes with StatReloader
+[22/May/2024 08:20:53] "GET /add_record/ HTTP/1.1" 200 3856
+[22/May/2024 08:20:55] "GET / HTTP/1.1" 200 4219
+[22/May/2024 08:21:02] "GET / HTTP/1.1" 200 4219
+[30/May/2024 09:34:34] "GET / HTTP/1.1" 200 4219
+[30/May/2024 09:34:34] "GET /static/images/favicon.png HTTP/1.1" 304 0
+[30/May/2024 09:34:37] "GET /add_record/ HTTP/1.1" 200 3856
+[30/May/2024 09:34:38] "GET / HTTP/1.1" 200 4219
+[30/May/2024 09:34:39] "GET /add_record/ HTTP/1.1" 200 3856
+[30/May/2024 09:34:42] "GET /add_record/ HTTP/1.1" 200 3856
+[30/May/2024 09:34:43] "GET / HTTP/1.1" 200 4219
+[03/Jun/2024 09:02:13] "GET / HTTP/1.1" 200 2656
+[03/Jun/2024 09:02:14] "GET /static/images/favicon.png HTTP/1.1" 304 0
+[03/Jun/2024 09:02:19] "POST / HTTP/1.1" 302 0
+[03/Jun/2024 09:02:19] "GET / HTTP/1.1" 200 4490
+[04/Jun/2024 13:51:15] "GET / HTTP/1.1" 200 4219
+[06/Jun/2024 11:09:52] "GET / HTTP/1.1" 200 4219
+[06/Jun/2024 11:09:57] "POST /search_record/ HTTP/1.1" 200 2167
+[07/Jun/2024 11:33:12] "GET /add_record/ HTTP/1.1" 200 3856
+[07/Jun/2024 11:33:16] "GET / HTTP/1.1" 200 4219
+[07/Jun/2024 11:33:22] "POST /search_record/ HTTP/1.1" 200 3047
+[07/Jun/2024 11:33:27] "GET / HTTP/1.1" 200 4219
+[07/Jun/2024 11:33:37] "POST /search_record/ HTTP/1.1" 200 2668
+[07/Jun/2024 11:33:39] "POST /search_record/ HTTP/1.1" 200 3047
+[07/Jun/2024 11:33:49] "GET /add_record/ HTTP/1.1" 200 3856
+[07/Jun/2024 11:33:49] "GET / HTTP/1.1" 200 4219
+[07/Jun/2024 11:34:00] "GET / HTTP/1.1" 200 4219
+[07/Jun/2024 11:34:02] "GET /record/17 HTTP/1.1" 200 2925
+[07/Jun/2024 11:34:04] "GET / HTTP/1.1" 200 4219
+[07/Jun/2024 11:34:05] "GET /record/17 HTTP/1.1" 200 2925
+[07/Jun/2024 11:34:06] "GET /update_record/17 HTTP/1.1" 200 3911
+[07/Jun/2024 11:34:07] "GET / HTTP/1.1" 200 4219
+[11/Jun/2024 14:42:49] "GET /static/images/favicon.png HTTP/1.1" 304 0
+Watching for file changes with StatReloader
+[15/Oct/2024 13:47:23] "GET / HTTP/1.1" 200 2656
+[15/Oct/2024 13:47:23] "GET /static/images/favicon.png HTTP/1.1" 200 4600
+[15/Oct/2024 13:47:28] "POST / HTTP/1.1" 302 0
+[15/Oct/2024 13:47:29] "GET / HTTP/1.1" 200 4490
+[15/Oct/2024 13:47:35] "GET /record/15 HTTP/1.1" 200 2927
+[15/Oct/2024 13:47:37] "GET /update_record/15 HTTP/1.1" 200 3912
+[15/Oct/2024 13:47:50] "POST /update_record/15 HTTP/1.1" 302 0
+[15/Oct/2024 13:47:50] "GET / HTTP/1.1" 200 4492
+[15/Oct/2024 13:47:59] "POST /search_record/ HTTP/1.1" 200 2668
+[15/Oct/2024 13:48:02] "GET / HTTP/1.1" 200 4221
+[17/Oct/2024 14:38:13] "GET / HTTP/1.1" 200 4221
+[17/Oct/2024 14:38:13] "GET /static/images/favicon.png HTTP/1.1" 200 4600
+[17/Oct/2024 14:38:14] "GET / HTTP/1.1" 200 4221
+[17/Oct/2024 14:38:15] "GET /add_record/ HTTP/1.1" 200 3856
+[17/Oct/2024 14:38:15] "GET /logout/ HTTP/1.1" 302 0
+[17/Oct/2024 14:38:15] "GET / HTTP/1.1" 200 2930
+[17/Oct/2024 14:38:16] "GET / HTTP/1.1" 200 2656
+[17/Oct/2024 14:38:19] "POST / HTTP/1.1" 302 0
+[17/Oct/2024 14:38:19] "GET / HTTP/1.1" 200 4492
+[21/Oct/2024 09:57:34] "GET / HTTP/1.1" 200 4221
+[24/Oct/2024 10:48:38] "GET / HTTP/1.1" 200 4221
+[04/Nov/2024 09:50:21] "GET / HTTP/1.1" 200 2656
+[04/Nov/2024 09:50:22] "GET /static/images/favicon.png HTTP/1.1" 200 4600
+[04/Nov/2024 09:50:22] "GET / HTTP/1.1" 200 2656
+[04/Nov/2024 09:50:33] "POST / HTTP/1.1" 302 0
+[04/Nov/2024 09:50:33] "GET / HTTP/1.1" 200 2953
+[04/Nov/2024 09:50:48] "POST / HTTP/1.1" 302 0
+[04/Nov/2024 09:50:48] "GET / HTTP/1.1" 200 4492
+[05/Nov/2024 13:55:20] "GET / HTTP/1.1" 200 2656
+[05/Nov/2024 13:55:20] "GET /static/images/favicon.png HTTP/1.1" 200 4600
+[05/Nov/2024 13:55:35] "POST / HTTP/1.1" 302 0
+[05/Nov/2024 13:55:35] "GET / HTTP/1.1" 200 4492
+[05/Nov/2024 13:55:54] "GET /record/7 HTTP/1.1" 200 2928
+[05/Nov/2024 13:56:03] "GET /record/9 HTTP/1.1" 200 2918
+[05/Nov/2024 13:56:44] "GET /record/12 HTTP/1.1" 200 2928
+[05/Nov/2024 13:57:08] "GET /record/16 HTTP/1.1" 200 2930
+[05/Nov/2024 13:57:21] "GET /logout/ HTTP/1.1" 302 0
+[05/Nov/2024 13:57:21] "GET / HTTP/1.1" 200 2930
+Watching for file changes with StatReloader
+[14/Nov/2024 08:12:13] "GET / HTTP/1.1" 200 2656
+[14/Nov/2024 08:12:13] "GET /static/images/favicon.png HTTP/1.1" 200 4600
+Watching for file changes with StatReloader
